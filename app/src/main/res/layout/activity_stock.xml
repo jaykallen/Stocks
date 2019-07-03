@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222">
+
+    <include
+        android:id="@+id/stockToolbar"
+        layout="@layout/content_toolbar" />
+
+    <TextView
+        android:id="@+id/latestPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="1572.07"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/changeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockToolbar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_toStartOf="@id/latestPriceTextView"
+        android:text="+2.39"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/changePercentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockToolbar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@id/latestPriceTextView"
+        android:text="0.15%"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latestPriceTextView"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="Amazon Incorporated"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/exchangeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="Nasdaq"
+        android:textColor="@color/colorGray9"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sectorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exchangeTextView"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="Energy"
+        android:textColor="@color/colorGray9"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/leftLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sectorTextView"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/openLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Open"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/openTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="1570.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/closeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/openLabel"
+                android:layout_marginBottom="8dp"
+                android:text="Close"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/closeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/openLabel"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="8dp"
+                android:text="1579.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/yearLowLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/closeLabel"
+                android:layout_marginBottom="8dp"
+                android:text="52 Wk Low"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/yearLowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/closeLabel"
+                android:layout_alignParentEnd="true"
+                android:text="1480.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/yearHighLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yearLowLabel"
+                android:layout_marginBottom="8dp"
+                android:text="52 Wk High"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/yearHighTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yearLowLabel"
+                android:layout_alignParentEnd="true"
+                android:text="1680.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/latestVolumeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yearHighLabel"
+                android:layout_marginBottom="8dp"
+                android:text="Latest Volume"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/latestVolumeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yearHighLabel"
+                android:layout_alignParentEnd="true"
+                android:text="1,568,000"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/lowLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Low"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/lowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="1560.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/highLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowLabel"
+                android:layout_marginBottom="8dp"
+                android:text="High"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/highTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lowLabel"
+                android:layout_alignParentEnd="true"
+                android:text="1580.00"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/peLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/highLabel"
+                android:layout_marginBottom="8dp"
+                android:text="P/E"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/peTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/highLabel"
+                android:layout_alignParentEnd="true"
+                android:text="255.62"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/marketCapLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/peLabel"
+                android:layout_marginBottom="8dp"
+                android:text="Mkt Cap"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/marketCapTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/peLabel"
+                android:layout_alignParentEnd="true"
+                android:text="122255.62"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/avgTotalVolumeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/marketCapLabel"
+                android:layout_marginBottom="8dp"
+                android:text="Avg Total Vol"
+                android:textColor="@color/colorGray9" />
+
+            <TextView
+                android:id="@+id/avgTotalVolumeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/marketCapLabel"
+                android:layout_alignParentEnd="true"
+                android:text="1,400,000"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leftLinear"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="onChartClick"
+        android:text="See Chart" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2153652996366584/7113724066" />
+
+</RelativeLayout>
+

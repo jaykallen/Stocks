@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorGray2">
+
+    <TextView
+        android:id="@+id/symbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:text="GE"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/symbolText"
+        android:layout_toStartOf="@+id/differenceText"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingStart="8dp"
+        android:text="General Eletric Company and a really long company name that might be super long"
+        android:textColor="@color/colorGray9"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:text="12.86"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/differenceText"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/symbolText"
+        android:layout_toStartOf="@id/percentText"
+        android:layout_marginEnd="4dp"
+        android:text="+0.32"
+        android:textColor="@color/colorGreen"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/percentText"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/symbolText"
+        android:layout_marginEnd="12dp"
+        android:text="0.02%"
+        android:textColor="@color/colorGreen"
+        android:textSize="14sp" />
+
+</RelativeLayout>
